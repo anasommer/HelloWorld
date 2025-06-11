@@ -2,6 +2,7 @@
 using System.Data;
 using System.Globalization;
 using Dapper;
+using HelloWorld.Data;
 using HelloWorld.Models;
 using Microsoft.Data.SqlClient;
 
@@ -11,13 +12,9 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            string connectionString = "Server=localhost;Database=DotNetCourseDatabase;TrustServerCertificate=True;User Id=SA;Password=SQLConnect1!";
+            DataContextDapper dapper = new DataContextDapper();
 
-            IDbConnection dbConnection = new SqlConnection(connectionString);
-
-            string sqlCommand = "SELECT GETDATE()";
-
-            DateTime rightNow = dbConnection.QuerySingle<DateTime>(sqlCommand);
+            DateTime rightNow = dapper.LoadDataSingle<DateTime>("SELECT GETDATE()");
 
             Console.WriteLine(rightNow.ToString());
 
@@ -47,7 +44,7 @@ namespace HelloWorld
            + "')";
 
             Console.WriteLine(sql);
-            int result = dbConnection.Execute(sql);
+            bool result = dapper.ExecuteSql(sql);
             Console.WriteLine($"Number of rows affected: {result}");
 
 
@@ -61,7 +58,7 @@ namespace HelloWorld
                 Computer.VideoCard
              FROM TutorialAppSchema.Computer";
 
-            IEnumerable<Computer> computers = dbConnection.Query<Computer>(sqlSelect);
+            IEnumerable<Computer> computers = dapper.LoadData<Computer>(sqlSelect);
 
             Console.WriteLine("'Motherboard','HasWifi','HasLTE','ReleaseDate','Price','VideoCard'");
 
