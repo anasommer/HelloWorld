@@ -2,13 +2,19 @@ using System.Data;
 using Dapper;
 using HelloWorld.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
 namespace HelloWorld.Data
 {
     public class DataContextDapper
     {
-        private string _connectionString = "Server=localhost;Database=DotNetCourseDatabase;TrustServerCertificate=True;User Id=SA;Password=SQLConnect1!";
-
+        private string _connectionString;
+        public DataContextDapper(IConfiguration config)
+        {
+            _connectionString = config.GetConnectionString("DefaultConnection") 
+                ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+        }
+     
         public IEnumerable<T> LoadData<T>(string sql)
         {
             IDbConnection dbConnection = new SqlConnection(_connectionString);

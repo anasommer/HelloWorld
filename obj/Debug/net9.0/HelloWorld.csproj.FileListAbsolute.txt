@@ -73,3 +73,10 @@
 /Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll
 /Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/obj/Debug/net9.0/HelloWorld.csproj.Up2Date
 /Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/obj/Debug/net9.0/HelloWorld.sourcelink.json
+/Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll
+/Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll
+/Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/appsettings.json
