@@ -1,0 +1,57 @@
+
+INSERT INTO TutorialAppSchema.Computer (
+                Motherboard,
+                HasWifi,
+                HasLTE,
+                ReleaseDate,
+                Price,
+                VideoCard
+            ) VALUES ('Ajsja','True','False','13/06/2025 00:46:09','944.87','R 2aw60')
+INSERT INTO TutorialAppSchema.Computer (
+                Motherboard,
+                HasWifi,
+                HasLTE,
+                ReleaseDate,
+                Price,
+                VideoCard
+            ) VALUES ('Ajsja','True','False','13/06/2025 00:46:09','944.87','R 2aw60')
+INSERT INTO TutorialAppSchema.Computer (
+                Motherboard,
+                HasWifi,
+                HasLTE,
+                ReleaseDate,
+                Price,
+                VideoCard
+            ) VALUES ('Ajsja','True','False','13/06/2025 22:11:39','944.87','R 2aw60')
+INSERT INTO TutorialAppSchema.Computer (
+                Motherboard,
+                HasWifi,
+                HasLTE,
+                ReleaseDate,
+                Price,
+                VideoCard
+            ) VALUES ('Ajsja','True','False','13/06/2025 22:11:54','944.87','R 2aw60')
+INSERT INTO TutorialAppSchema.Computer (
+                Motherboard,
+                HasWifi,
+                HasLTE,
+                ReleaseDate,
+                Price,
+                VideoCard
+            ) VALUES ('Ajsja','True','False','13/06/2025 22:12:12','944.87','R 2aw60')
+INSERT INTO TutorialAppSchema.Computer (
+                Motherboard,
+                HasWifi,
+                HasLTE,
+                ReleaseDate,
+                Price,
+                VideoCard
+            ) VALUES ('Ajsja','True','False','13/06/2025 22:13:49','944.87','R 2aw60')
+INSERT INTO TutorialAppSchema.Computer (
+                Motherboard,
+                HasWifi,
+                HasLTE,
+                ReleaseDate,
+                Price,
+                VideoCard
+            ) VALUES ('Ajsja','True','False','13/06/2025 22:14:08','944.87','R 2aw60')

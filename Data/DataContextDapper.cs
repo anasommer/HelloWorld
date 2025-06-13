@@ -1,6 +1,5 @@
 using System.Data;
 using Dapper;
-using HelloWorld.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
@@ -8,37 +7,38 @@ namespace HelloWorld.Data
 {
     public class DataContextDapper
     {
-        private string _connectionString;
+        private readonly IConfiguration _config;
         public DataContextDapper(IConfiguration config)
         {
-            _connectionString = config.GetConnectionString("DefaultConnection") 
-                ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            _config = config;
         }
-     
+
         public IEnumerable<T> LoadData<T>(string sql)
         {
-            IDbConnection dbConnection = new SqlConnection(_connectionString);
-            return dbConnection.Query<T>(sql);
+            using (IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                dbConnection.Open();
+                using (IDbTransaction tran = dbConnection.BeginTransaction(IsolationLevel.ReadCommitted))
+                {
+                    var holdVal = dbConnection.Query<T>(sql, null, transaction: tran, commandTimeout: 999999999);
+                    dbConnection.Close();
+                    return holdVal;
+                }
+            }
         }
 
-        public T LoadDataSingle<T>(string sql)
+        public int ExecuteSQL(string sql)
         {
-            IDbConnection dbConnection = new SqlConnection(_connectionString);
-            return dbConnection.QuerySingle<T>(sql);
+            using (IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                return dbConnection.Execute(sql);
+            }
         }
 
-        public bool ExecuteSql(string sql)
+        public void ExecuteSqlMulti(string sql, IDbConnection dbConnection)
         {
-            IDbConnection dbConnection = new SqlConnection(_connectionString);
-            return dbConnection.Execute(sql) > 0;
-        }
-        
-        public int ExecuteSqlWithRowCount(string sql)
-        {
-            IDbConnection dbConnection = new SqlConnection(_connectionString);
-            return dbConnection.Execute(sql);
+            dbConnection.Execute(sql);
         }
 
-           
     }
 }

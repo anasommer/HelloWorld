@@ -80,3 +80,4 @@
 /Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll
 /Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll
 /Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/appsettings.json
+/Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Newtonsoft.Json.dll
