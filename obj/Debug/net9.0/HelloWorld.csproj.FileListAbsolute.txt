@@ -81,3 +81,4 @@
 /Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll
 /Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/appsettings.json
 /Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/Newtonsoft.Json.dll
+/Users/anastassiasommer/Desktop/dotnet-course-code/HelloWorld/bin/Debug/net9.0/AutoMapper.dll
